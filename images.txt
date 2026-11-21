@@ -45,3 +45,4 @@ ghcr.io/wttwins/wrong-notebook:latest
 theasp/novnc:latest
 rustfs/rustfs:latest
 linuxserver/chrome:latest
+ghcr.io/shen-chris/dsq-docker-wechat:main
