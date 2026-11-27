@@ -78,11 +78,11 @@ jobs:
               target_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$new_repo_name"
 
               # 目标已存在则跳过
-              if skopeo inspect --creds "$ALIYUN_REGISTRY_USER:$ALIYUN_REGISTRY_PASSWORD" \
-                   "docker://$target_image" > /dev/null 2>&1; then
-                  echo ">>> Skip: $new_repo_name"
-                  continue
-              fi
+              # if skopeo inspect --creds "$ALIYUN_REGISTRY_USER:$ALIYUN_REGISTRY_PASSWORD" \
+              #     "docker://$target_image" > /dev/null 2>&1; then
+              #    echo ">>> Skip: $new_repo_name"
+              #    continue
+              # fi
 
               echo ">>> Copy: $full_image ($arch) -> $new_repo_name"
               # 仓库到仓库直接复制，不解压、不落 Docker 存储
